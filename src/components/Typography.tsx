@@ -6,9 +6,11 @@ type TypographyVariantsClasses = {
   h3: string;
   h4: string;
   h5: string;
+
   'body-2xl-extrabold': string;
   'body-xl-tall': string;
   'body-xl': string;
+  'body-xl-medium': string;
   'body-xl-bold': string;
   'body-lg-bold': string;
   'body-lg-medium': string;
@@ -62,6 +64,8 @@ const Typography = (props: TypographyProps) => {
     'body-xl-tall': 'text-xl-tall font-bold',
     /* Body/XL, Regular, 20px, 160% */
     'body-xl': 'text-xl-tall font-regular',
+    /* Body/XL, Regular, 20px, 160% */
+    'body-xl-medium': 'text-xl-tall font-medium',
     /* Body/XL, Bold, 20px, 140% */
     'body-xl-bold': 'text-xl font-bold',
     /* Body/LG, Bold, 18px */

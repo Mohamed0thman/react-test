@@ -64,6 +64,8 @@ module.exports = {
       'main-blue': '#100A55',
       red: '#EE6A5F',
       'white-transparent': '#FFFFFF54',
+      'black-transparent': '#00000030',
+
     },
     fontFamily: {
       sans: ['Plus Jakarta Sans', 'sans-serif'],
