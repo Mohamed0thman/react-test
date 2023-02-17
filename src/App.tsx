@@ -1,23 +1,20 @@
-import Card from './components/card/Card';
-import { data, rowData } from './assets/data/index';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout';
+import SavePage from './pages/SavePage';
+import SigininPage from './pages/SigininPage';
+import TablePage from './pages/TablePage';
+import Request from './pages/Request';
+
 function App() {
   return (
-    <div className="App p-10">
-      <div className=" grid grid-cols-1 gap-8  lg:grid-cols-3  sm:grid-cols-2">
-        {data.map((item, i) => (
-          <Card key={i} data={item} border rooms />
-        ))}
-      </div>
-
-      <div className="my-10"></div>
-
-      {rowData.map((item, i) => (
-        <Card key={i} row data={item} />
-      ))}
-      {data.map((item, i) => (
-        <Card key={i} row data={item} border rooms btn btnText="Pay Rent" />
-      ))}
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<SavePage />} />
+        <Route path="/signin" element={<SigininPage />} />
+        <Route path="/table" element={<TablePage />} />
+        <Route path="/request" element={<Request />} />
+      </Route>
+    </Routes>
   );
 }
 

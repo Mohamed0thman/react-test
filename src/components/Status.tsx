@@ -1,10 +1,11 @@
 import React from 'react';
+import { Base } from './base';
 
-type Props = {
+type Props = Base & {
   text: 'Pending' | 'Approved' | 'Visited';
 };
 
-const Stauts = ({ text }: Props) => {
+const Status = ({ text, className }: Props) => {
   let status;
   switch (text.toLowerCase()) {
     case 'pending': {
@@ -24,11 +25,13 @@ const Stauts = ({ text }: Props) => {
   return (
     <div
       className={`flex items-center justify-center w-[88px] h-[32px] rounded-tl-2xl 
-      rounded-br-2xl text-white text-sm  font-medium   ${status}`}
+      rounded-br-lg text-white text-sm  font-medium   ${status} ${
+        className || ''
+      }`}
     >
       {text}
     </div>
   );
 };
 
-export default Stauts;
+export default Status;

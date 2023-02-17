@@ -1,17 +1,18 @@
 import React from 'react';
+import { Base } from './base';
 
-type Props = {
+type Props = Base & {
   handleOnClick?: React.MouseEventHandler<HTMLButtonElement>;
-  classContainer?: string;
-  children: React.ReactNode | string;
   variant: 'primary' | 'secondary' | 'primary_outline' | 'secondary_outline';
+  type?: 'button' | 'submit' | 'reset';
 };
 
 const Button = ({
   children,
   handleOnClick,
   variant,
-  classContainer,
+  className,
+  type,
 }: Props) => {
   const variants = {
     primary: 'bg-main-600 border-main-600 text-white',
@@ -22,7 +23,10 @@ const Button = ({
 
   return (
     <button
-      className={`relative px-6 py-3 border rounded-lg ${variants[variant]} ${classContainer}`}
+      type={type}
+      className={`px-6 py-3 border rounded-lg ${variants[variant]} ${
+        className || ''
+      }  `}
       onClick={handleOnClick}
     >
       {children}

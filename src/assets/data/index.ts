@@ -1,4 +1,3 @@
-import { Data } from '../../components/card/Card';
 import Images from '../images';
 
 export const data = [
@@ -76,7 +75,7 @@ export const data = [
   },
 ];
 
-export const rowData: Data[] = [
+export const rowData = [
   {
     title: 'House with pool',
     price: '$2,095',
