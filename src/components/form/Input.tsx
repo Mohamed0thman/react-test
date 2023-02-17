@@ -7,9 +7,10 @@ type Props = {
   as?: 'textarea';
   placeholder?: string;
   id: string;
+  type: string;
 };
 
-const Input = ({ className, register, as, id, placeholder }: Props) => {
+const Input = ({ className, register, as, id, placeholder, type }: Props) => {
   const defaultClass = `relative block w-full rounded-lg border border-gray-200 py-3 px-5 text-main-secondary text-black outline-none focus:border-main-yellow-600 focus-visible:ring-main-yellow-600 `;
   if (as === 'textarea') {
     <textarea
@@ -28,6 +29,7 @@ const Input = ({ className, register, as, id, placeholder }: Props) => {
       id={id}
       placeholder={placeholder}
       {...register}
+      type={type}
       className={`${defaultClass} ${className || ''}`}
     />
   );

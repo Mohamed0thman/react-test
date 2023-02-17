@@ -5,5 +5,6 @@ import Status from './Status';
 import Icon from './Icon';
 import Typography from './Typography';
 import Alert from './Alert';
+import Avatar from './Avatar';
 
-export { Flex, Divider, Button, Status, Icon, Typography, Alert };
+export { Flex, Divider, Button, Status, Icon, Typography, Alert, Avatar };

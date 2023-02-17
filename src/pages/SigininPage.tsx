@@ -13,6 +13,7 @@ const SigininPage = () => {
   const profileSchema = {
     name: {
       id: 'name',
+      type: 'text',
       label: 'Name',
       placeholder: 'Full Name',
       register: register('name', {
@@ -27,6 +28,7 @@ const SigininPage = () => {
     },
     phoneNumber: {
       id: 'phoneNumber',
+      type: 'text',
       label: 'Phone Number',
       placeholder: 'Enter phone Number',
       register: register('phoneNumber', {
@@ -41,6 +43,7 @@ const SigininPage = () => {
     },
     email: {
       id: 'email',
+      type: 'email',
       label: 'Email',
       placeholder: 'hi@example.com',
       register: register('email', {
@@ -55,6 +58,7 @@ const SigininPage = () => {
     },
     address: {
       id: 'address',
+      type: 'text',
       label: 'Address',
       placeholder: '12 Nour Stt. Jeddah',
       register: register('address', {
@@ -77,6 +81,7 @@ const SigininPage = () => {
 
       <Lable htmlFor="phoneNumber" title="phoneNumber" />
       <Input
+        type="text"
         register={register('phoneNumber', {
           required: 'Phone Number is required',
           minLength: {

@@ -7,6 +7,7 @@ import {
 } from 'react-hook-form';
 import { Input, Lable } from '.';
 import { Typography } from '..';
+
 import { Base } from '../base';
 
 type Props = Base & {
@@ -17,11 +18,13 @@ type Props = Base & {
   register: UseFormRegisterReturn;
   error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
   placeholder?: string;
+  type: string;
 };
 const FormGroup = ({
   className,
   children,
   label,
+  type,
   labelClass,
   inputClass,
   placeholder,
@@ -44,6 +47,7 @@ const FormGroup = ({
         className={`${inputClass || ''}`}
         placeholder={placeholder}
         register={register}
+        type={type}
       />
       {error && (
         <Typography as="p" variant="body-md-medium" className="text-error">
